@@ -334,7 +334,7 @@ df['feedback'] = df['cluster'].apply(generate_feedback2)
 
 # Créer l'application Dash
 app = Dash()
-server=app/server
+server=app.server
 app.layout = html.Div([
     html.H1(children='Tableau de bord personnalisé des étudiants', style={'textAlign': 'center'}),
     dcc.Dropdown(df.student_name.unique(), 'Alice', id='dropdown-selection'),
